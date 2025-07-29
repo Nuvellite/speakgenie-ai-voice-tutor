@@ -1,8 +1,8 @@
 # SpeakGenie AI Voice Tutor - Internship Task Submission
 
 **Candidate Name:** Lohith.N.S
-**Contact Email:** [Your Email Address]
-**Submission Date:** [Current Date, e.g., July 28, 2025]
+**Contact Email:** lohithsenthil22@gmail.com
+**Submission Date:** July 29, 2025
 
 ---
 
