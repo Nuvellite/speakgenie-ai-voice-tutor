@@ -97,7 +97,7 @@ Follow these steps to set up and run the AI Voice Tutor web application on your 
 With your virtual environment activated, install all required libraries:
 ```bash
 pip install openai streamlit streamlit-audiorecorder pydub python-dotenv
-
+```
 ### 5. Configure API Key
 
 1.  **Get your OpenAI API Key:** (Provided by SpeakGenie team).
