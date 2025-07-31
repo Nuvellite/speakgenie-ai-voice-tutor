@@ -10,6 +10,8 @@
 
 This project implements a Real-Time AI Voice Tutor as specified in the SpeakGenie internship task. It provides an interactive learning experience for children through voice-based communication, featuring both a Free Chat mode and a scenario-driven Roleplay Mode with multilingual support, all accessible via a user-friendly web interface.
 
+Initially, this tutor was developed as a command-line application to establish core functionalities. It was then transitioned to a web-based interface using Streamlit to provide a more engaging and accessible demonstration, enhancing the overall user experience.
+
 ## Core Features Implemented
 
 1.  **Voice-based AI Chatbot (Free Chat):**
@@ -141,6 +143,11 @@ pip install openai streamlit streamlit-audiorecorder pydub python-dotenv
     * **Translation (within GPT):** When a native language is selected in the UI, a specific instruction is added to GPT's prompt to translate its English response into the target native language. The response is formatted as "English Response. (Native Language Translation)".
     * **Text-to-Speech (AI Output):** OpenAI's TTS (using an English voice like 'alloy') attempts to speak this combined English and native language text.
     * **Trade-off/Constraint:** Achieving truly native-quality pronunciation for diverse regional languages requires highly specialized multilingual TTS models (e.g., from Google Cloud or high-tier ElevenLabs). Due to API access constraints (payment/trial limitations), these dedicated multilingual TTS services could not be fully integrated. The current solution effectively demonstrates the *logic* of multilingual support and AI-driven translation, even if the final native language pronunciation by an English voice is not perfect. This showcases adaptability to real-world resource limitations.
+      
+### 3. Audio Playback Behavior (Web UI)
+
+* **Observation:** In the Streamlit web interface, after the AI generates its spoken response, the user needs to click a play button to hear the audio. The audio does not autoplay.
+* **Reason/Trade-off:** This is a common behavior in modern web browsers, which actively block audio from playing automatically without a direct user interaction (like a click on a button) for security and user experience reasons. Streamlit's `st.audio()` widget, while displaying the player immediately, cannot override these browser autoplay policies. The current implementation ensures the audio is generated and available for playback, demonstrating the TTS functionality. Overcoming this would typically require more advanced web development techniques (e.g., custom JavaScript components) that are beyond the scope of a basic Streamlit demo.
 
 ---
 
